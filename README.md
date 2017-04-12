@@ -23,9 +23,6 @@ Lakshmi Udupa   (ludupa@uncc.edu)
 ## Installation
 
 
-
-## Usage
-
  
 
 ## License
