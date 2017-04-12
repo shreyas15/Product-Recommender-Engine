@@ -1,8 +1,7 @@
 # User Browsing-model based Recommender Engine
 
 ### Team: 
-Shreyas S. Bhat (ssubra15@uncc.edu)
-
+Shreyas S. Bhat (ssubra15@uncc.edu) </n>
 Lakshmi Udupa   (ludupa@uncc.edu)
 
 ## Proposed Project
@@ -25,10 +24,6 @@ This data set contains a small sample of user profiles and their interests gener
 2) Apache Spark
 3) Apache Zepplin
 
-## Installation
-
-
- 
 
 ## License
 
