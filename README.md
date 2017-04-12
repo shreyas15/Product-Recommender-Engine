@@ -1,4 +1,4 @@
-# User-browsing-model-based-Recommender-Engine
+# User Browsing-model based Recommender Engine
 
 ### Team: 
 Shreyas S. Bhat (ssubra15@uncc.edu)
