@@ -6,7 +6,7 @@ Shreyas S. Bhat (ssubra15@uncc.edu)
 Lakshmi Udupa   (ludupa@uncc.edu)
 
 ## Proposed Project
-In this project we use a large dataset of over 3.5GiB of user browsing data to model a Recommender Engine using Apache Spark.
+In this project we use a large dataset of over 3.5GiB of user browsing data to model a Recommender Engine to make suggestions based on user interests using Apache Spark.
 
 ## Data Source
 We use the data available from Yahoo! Research. The data set being [Yahoo Data Targeting User Modeling, Version 1.0.](https://webscope.sandbox.yahoo.com/catalog.php?datatype=a&did=78)  
@@ -21,9 +21,11 @@ This data set contains a small sample of user profiles and their interests gener
 
 
 ## Technology / Tools Proposed
-1) Amazon AWS - S3, EMR instances. 
-2) Apache Spark
-3) Apache Zepplin
+1) Amazon AWS - S3, EMR instances - Amazon EMR makes it easy to launch a Hadoop cluster and install many of the Hadoop ecosystem applications, such as Pig, Hive, HBase, and Spark. EMR makes it easy for data scientists to create clusters quickly and process vast amounts of data in a few clicks. EMR also integrates with other AWS big data services such as Amazon S3 for low-cost durable storage.
+
+2) Apache Spark - We explore Spark’s MLlib and program using pySpark.
+
+3) Apache Zepplin - A web-based notebook that enables interactive data analytics. We can make beautiful data-driven, interactive and collaborative documents with SQL, Scala and more.
 
 
 ## License
