@@ -1,6 +1,6 @@
 # User-browsing-model-based-Recommender-Engine
 
-##Team: 
+### Team: 
 Shreyas S. Bhat (ssubra15@uncc.edu)
 Lakshmi Udupa   (ludupa@uncc.edu)
 
