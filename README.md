@@ -9,7 +9,7 @@ Lakshmi Udupa   (ludupa@uncc.edu)
 In this project we use a large dataset of over 3.5GiB of user browsing data to model a Recommender Engine using Apache Spark.
 
 ## Data Source
-We use the data available from Yahoo! Research. The data set being [Yahoo Data Targeting User Modeling, Version 1.0](https://webscope.sandbox.yahoo.com/catalog.php?datatype=a&did=78)  
+We use the data available from Yahoo! Research. The data set being [Yahoo Data Targeting User Modeling, Version 1.0.](https://webscope.sandbox.yahoo.com/catalog.php?datatype=a&did=78)  
 
 This data set contains a small sample of user profiles and their interests generated from several months of user activities at Yahoo webpages. Each user is represented as one feature vector and its associated labels, where all user identifiers were removed. Feature vectors are derived from user activities during a training period of 90 days, and labels from a test period of 2 weeks that immediately followed the training period. Each dimension of the feature vector quantifies a user activity with a certain interest category from an internal Yahoo taxonomy (e.g., "Sports/Baseball", "Travel/Europe"), calculated from user interactions with pages, ads, and search results, all of which are internally classified into these interest categories. The labels are derived in a similar way, based on user interactions with classified pages, ads, and search results during the test period. It is important to note that there exists a hierarchical structure among the labels, which is also provided in the data set.
 
