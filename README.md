@@ -5,8 +5,20 @@ Shreyas S. Bhat (ssubra15@uncc.edu)
 
 Lakshmi Udupa   (ludupa@uncc.edu)
 
+## Proposed Project
 
-    
+
+## Data Source
+
+
+## Business Use Case/ Advantage
+
+
+## Project Objectives
+
+
+## Technology / Tools Proposed
+
 
 ## Installation
 
