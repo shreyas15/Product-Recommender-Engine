@@ -19,8 +19,12 @@ Many companies these days target audiences based on their interest and it become
 So, we need to make the system smarter by implementing a machine learning algortihm to automatically learn from the data that the company has and make predictions suitably. This can help in the retail segment significantly to solve the shelf-size problem. It can also help manufacturers and retailers to stock necessary products. 
 
 ## Project Objectives
+A. What we will definitely accomplish
+  -- 
+B. What we will likely accomplish: 
 
-
+C. What we would like to accomplish (Stretch goal): 
+  -- 
 
 ## Technology / Tools Proposed
 1) Amazon AWS - S3, EMR instances - Amazon EMR makes it easy to launch a Hadoop cluster and install many of the Hadoop ecosystem applications, such as Pig, Hive, HBase, and Spark. EMR makes it easy for data scientists to create clusters quickly and process vast amounts of data in a few clicks. EMR also integrates with other AWS big data services such as Amazon S3 for low-cost durable storage.
