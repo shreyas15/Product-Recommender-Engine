@@ -15,9 +15,11 @@ This data set contains a small sample of user profiles and their interests gener
 
 
 ## Business Use Case/ Advantage
-
+Many companies these days target audiences based on their interest and it becomes imperetive for organizations to determine what user interests are. For example, if a new advertisement, product propmotion or offer is to be marketed, users can be targeted based on their last purchase or previous purchases over a period of time. It is hard for companies to iterate and manually determine various category of users from a database by altering different parameters - it becomes a tedious and a rather elaborate and expensive process. 
+So, we need to make the system smarter by implementing a machine learning algortihm to automatically learn from the data that the company has and make predictions suitably. This can help in the retail segment significantly to solve the shelf-size problem. It can also help manufacturers and retailers to stock necessary products. 
 
 ## Project Objectives
+
 
 
 ## Technology / Tools Proposed
