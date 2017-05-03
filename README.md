@@ -17,15 +17,19 @@ Alternating least squares method:
 ### Cosine-similarity method: To execute recommenderEngine.py
 
 1. Place the input file in the hdfs
+
   sudo hdfs dfs -put <file_name> /user/root/
 
 2. To run the recommenderEngine.py
+
   spark-submit --driver-memory 2g recommenderEngine.py ratings2.csv 9994 0439893577 > test.out
 
 ### Alternating least square method: To execute recommenderEngine_ALS.py
 
 1. Place the input file in the hdfs
+
   sudo hdfs dfs -put <file_name> /user/root/
 
 2. To run the recommenderEngine.py
+
   spark-submit --driver-memory 2g recommenderEngine_ALS.py new_data.csv meta_data.csv personalRatings.txt > output.out
