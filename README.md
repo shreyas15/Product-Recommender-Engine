@@ -1,30 +1,30 @@
-#Product Recommender Engine
+# Product Recommender Engine
 
-##Teams:
+## Teams:
 Lakshmi Udupa 800956319
 Shreyas Subramanya Bhat 800958406
 
-##Input files:
+## Input files:
 Cosine-similarity method:
-ratings2.csv
+    ratings2.csv
 Alternating least squares method:
-ratings_als.csv
-metadata.csv
-Single_user_rating.txt
+    ratings_als.csv
+    metadata.csv
+    Single_user_rating.txt
 
-##Steps to execute:
-###Cosine-similarity method: To execute recommenderEngine.py
+## Steps to execute:
+### Cosine-similarity method: To execute recommenderEngine.py
 
 1. Place the input file in the hdfs
-sudo hdfs dfs -put <file_name> /user/root/
+  sudo hdfs dfs -put <file_name> /user/root/
 
 2. To run the recommenderEngine.py
-spark-submit --driver-memory 2g recommenderEngine.py ratings2.csv 9994 0439893577 > test.out
+  spark-submit --driver-memory 2g recommenderEngine.py ratings2.csv 9994 0439893577 > test.out
 
-###Alternating least square method: To execute recommenderEngine_ALS.py
+### Alternating least square method: To execute recommenderEngine_ALS.py
 
 1. Place the input file in the hdfs
-sudo hdfs dfs -put <file_name> /user/root/
+  sudo hdfs dfs -put <file_name> /user/root/
 
-2.To run the recommenderEngine.py
-spark-submit --driver-memory 2g recommenderEngine_ALS.py new_data.csv meta_data.csv personalRatings.txt > output.out
+2. To run the recommenderEngine.py
+  spark-submit --driver-memory 2g recommenderEngine_ALS.py new_data.csv meta_data.csv personalRatings.txt > output.out
