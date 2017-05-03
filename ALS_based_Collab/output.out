@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/home/hduser/Downloads/amazon/new/ALS based Collab/recommenderEngine_ALS.py", line 46, in <module>
+    sc = SparkContext(conf=conf)
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/context.py", line 115, in __init__
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/context.py", line 172, in _do_init
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/context.py", line 235, in _initialize_context
+  File "/usr/lib/spark/python/lib/py4j-0.9-src.zip/py4j/java_gateway.py", line 1064, in __call__
+  File "/usr/lib/spark/python/lib/py4j-0.9-src.zip/py4j/protocol.py", line 308, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+: java.io.FileNotFoundException: Added file file:/home/hduser/Downloads/amazon/new/ALS%20based%20Collab/recommenderEngine_ALS.py does not exist.
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1372)
+	at org.apache.spark.SparkContext.addFile(SparkContext.scala:1348)
+	at org.apache.spark.SparkContext$$anonfun$16.apply(SparkContext.scala:499)
+	at org.apache.spark.SparkContext$$anonfun$16.apply(SparkContext.scala:499)
+	at scala.collection.immutable.List.foreach(List.scala:318)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:499)
+	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:234)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:381)
+	at py4j.Gateway.invoke(Gateway.java:214)
+	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:79)
+	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:68)
+	at py4j.GatewayConnection.run(GatewayConnection.java:209)
+	at java.lang.Thread.run(Thread.java:745)
+

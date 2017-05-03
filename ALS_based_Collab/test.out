@@ -1,0 +1,57 @@
+Got 2252771 ratings from 1342911 users on 327698 products.
+Training: 1348206, validation: 448943, test: 455626
+RMSE (validation) = 2.576039 for the model trained with rank = 12, lambda = 0.0, and numIter = 20.
+RMSE (validation) = 1.546958 for the model trained with rank = 12, lambda = 0.1, and numIter = 20.
+The best model was trained with rank = 12 and lambda = 0.1, and numIter = 20, and its RMSE on the test set is 1.534974.
+The best model improves the baseline by -20.45%.
+Products recommended for you:
+ 1: Dora with Stars Backpack with Lunch Case
+ 2: Paddington Bear Luncheon Napkin
+ 3: LEGO Star Wars: Droid Fighter (7111)
+ 4: Winning Moves Games Rubik's You Can Do It
+ 5: HOT WHEELS 2010 NEW MODELS 22 OF 44 WHITE '08 VIPER SRT10 ACR
+ 6: Magnetic Colors Book
+ 7: Purple-kids Washable Ink Stamp Pad - Childsafe
+ 8: Family Guy - Stewie Head Football
+ 9: Phineas And Ferb Lenticular Puzzle - 150 Pieces
+10: Happy Birthday Foil Banner - PINK - 2.7m
+11: Breyer Run-In Barn - Wood
+12: Disney Celebrations Vinylmation 'Happy Birthday' - 3&quot;
+13: Yu-Gi-Oh! - Granmarg the Mega Monarch (SHSP-EN041) - Shadow Specters - 1st Edition - Secret Rare
+14: Star Wars 84866 Dexter Jettster Coruscant Informant Action Figure - Attack of the Clones
+15: The Mummy - Legionnaire O'Connell with Officer's Uniform!
+16: 16 Inch Raggedy Ann Classic Doll
+17: Kidoozie jr Series Rocket Zoomer Novelty
+18: LiL' Bratz Wallet
+19: Heads &amp; Tails Lion
+20: WrestleMania XV Signature Series 3: &quot;Jacqueline&quot;
+21: Maiden Mary
+22: OFNA Racing Pull Start Unit w/Rope, Force .21, .26, .28
+23: Yu-Gi-Oh! - Hysteric Party (SD8-EN027) - Structure Deck 8: Lord of the Storm - 1st Edition - Common
+24: Kidrobot Happy Labbit Mini Plush Figures
+25: Bendon Spider Man and Friends Board Books (Set of 4)
+26: 50 Pieces Micro Timber by Maxim Enterprise (53051)
+27: 'NSync Collectible Marionette - Justin Timberlake Doll
+28: Combat Pure Gear Youth Baseball Bat -12
+29: Kyosho EP 2WD Sand Master Combo Kit (1/10 Scale), Color Type 1 Red
+30: Marvel The Amazing Spider-Man, Stealth Venom (BLACK) Action Figure
+31: LittleBigPlanet 24&quot; Sackboy
+32: Learning Resources Cash Bash
+33: Love Me Playing Cards
+34: Pride Eagle Plus Toy Ready to Stuff
+35: Alhambra: Big Box
+36: White Mountain Puzzles Our Friends - 1000 Piece Jigsaw Puzzle
+37: Hollywood Squares by Parker Brothers
+38: Winnie the Pooh Sandbox and Umbrella Set
+39: Mini Soccer Ball and Players Erasers 42 Pcs
+40: 1963 Chevy Impala SS Hard Top 1/18 White
+41: Hand Puppet - Pig
+42: Peanuts Charlie Brown Christmas Playset - Charlie the Play Director
+43: LeapFrog Learn And Groove Xylophone Zoo
+44: LeapFrog My Own Story Time Pad
+45: Daisy Rock WildWood Acoustic Short Scale Guitar, Bleach Blonde
+46: Full Metal Alchemist Snake Necklace with Bracelet
+47: Aurora Plush 16 inches Mama and Baby Lynx
+48: Disney Infinity Exclusive Rare 5 Pcs Set - Included: Power Disc 3 Pcs (Mike's Car, Tron User Control, Zurgs Wrath) + Toys&quot;r&quot;us Exclusive Crystal Mr. Incredible + Toys&quot;r&quot;us Exclusive Crystal Sulley
+49: Little Tikes Sport Coupe
+50: Care Bears Brave Heart Lion 8&quot; Plush
