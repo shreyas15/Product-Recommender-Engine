@@ -1,9 +1,9 @@
 # Product Recommender Engine
 
 ## Teams:
-Lakshmi Udupa 800956319
+Lakshmi Udupa (800956319)
 
-Shreyas Subramanya Bhat 800958406
+Shreyas Subramanya Bhat (800958406)
 
 ## Input files:
 Cosine-similarity method:
