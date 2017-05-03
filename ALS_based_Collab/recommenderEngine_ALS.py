@@ -7,12 +7,12 @@ from os.path import join, isfile, dirname
 from pyspark import SparkConf, SparkContext
 from pyspark.mllib.recommendation import ALS
 
-def sliceRating(line):
+def parseRating(line):
     "Parses a rating record from ratings csv with format user_id|product_id|rating|timestamp "
     fields = line.strip().split("|")
     return (long(fields[3]) / 100) % 10, (int(fields[0]), int(fields[1]), float(fields[2]))
 
-def retrieveProduct(line):
+def parseProduct(line):
     "Parses records in metadata with format product_id#title"
     fields = line.strip().split("#")
     return int(fields[0]), fields[1]
@@ -20,7 +20,7 @@ def retrieveProduct(line):
 def loadRatings(ratingsFile):
     "Load ratings from file "
     f = open(ratingsFile, 'r')
-    ratings = filter(lambda r: r[2] > 0, [sliceRating(line)[1] for line in f])
+    ratings = filter(lambda r: r[2] > 0, [parseRating(line)[1] for line in f])
     f.close()
     if not ratings:
         print "No ratings provided."
@@ -28,7 +28,7 @@ def loadRatings(ratingsFile):
     else:
         return ratings
 
-def calculateRmse(model, data, n):
+def computeRmse(model, data, n):
     "Compute RMSE (Root Mean Squared Error)"
     predictions = model.predictAll(data.map(lambda x: (x[0], x[1])))
     predictionsAndRatings = predictions.map(lambda x: ((x[0], x[1]), x[2])) \
@@ -38,7 +38,7 @@ def calculateRmse(model, data, n):
 
 if __name__ == "__main__":
     if (len(sys.argv) != 4):
-        print "Usage: spark-submit --driver-memory 2g recommenderEngine_ALS.py <ratings_file> <meta_data_file> <single_user_ratings_file>"
+        print "Usage: spark-submit --driver-memory 2g recom.py <ratings_file> <meta_data_file> <single_user_ratings_file>"
         sys.exit(1)
 
     # set up environment
@@ -51,10 +51,10 @@ if __name__ == "__main__":
 
     # load ratings and product titles
     # ratings is an RDD of (last digit of timestamp, (user_id, product_id, rating))
-    ratings = sc.textFile(sys.argv[1]).map(sliceRating)
+    ratings = sc.textFile(sys.argv[1]).map(parseRating)
 
     # products is an RDD of (product_id, Title)
-    products = dict(sc.textFile(sys.argv[2]).map(retrieveProduct).collect())
+    products = dict(sc.textFile(sys.argv[2]).map(parseProduct).collect())
 
     numRatings = ratings.count()
     numUsers = ratings.values().map(lambda r: r[0]).distinct().count()
@@ -84,9 +84,10 @@ if __name__ == "__main__":
     print "Training: %d, validation: %d, test: %d" % (numTraining, numValidation, numTest)
 
     # train models and evaluate them on the validation set
-    ranks = [8, 12]
-    lambdas = [0.01, 0.1, 10]
-    numIters = [10, 20]
+
+    ranks = [12] #[8, 12]
+    lambdas = [0.01, 0.1]
+    numIters = [20] #[10, 20]
     bestModel = None
     bestValidationRmse = float("inf")
     bestRank = 0
@@ -95,7 +96,7 @@ if __name__ == "__main__":
 
     for rank, lmbda, numIter in itertools.product(ranks, lambdas, numIters):
         model = ALS.train(training, rank, numIter, lmbda)
-        validationRmse = calculateRmse(model, validation, numValidation)
+        validationRmse = computeRmse(model, validation, numValidation)
         print "RMSE (validation) = %f for the model trained with " % validationRmse + \
               "rank = %d, lambda = %.1f, and numIter = %d." % (rank, lmbda, numIter)
         if (validationRmse < bestValidationRmse):
@@ -105,7 +106,7 @@ if __name__ == "__main__":
             bestLambda = lmbda
             bestNumIter = numIter
 
-    testRmse = calculateRmse(bestModel, test, numTest)
+    testRmse = computeRmse(bestModel, test, numTest)
 
     # use the test data to evaluate the best model.
     print "The best model was trained with rank = %d and lambda = %.1f, " % (bestRank, bestLambda) \
@@ -119,6 +120,7 @@ if __name__ == "__main__":
 
     # make personalized recommendations for the given user in the input single user ratings file
     # we eliminate all products user has already rated to make fresh predictions
+
     myRatedProductIds = set([x[1] for x in myRatings])
     candidates = sc.parallelize([m for m in products if m not in myRatedProductIds])
     predictions = bestModel.predictAll(candidates.map(lambda x: (0, x))).collect()
