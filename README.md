@@ -26,7 +26,5 @@ spark-submit --driver-memory 2g recommenderEngine.py ratings2.csv 9994 043989357
 1. Place the input file in the hdfs
 sudo hdfs dfs -put <file_name> /user/root/
 
-                 2.To run the recommenderEngine.py
+2.To run the recommenderEngine.py
 spark-submit --driver-memory 2g recommenderEngine_ALS.py new_data.csv meta_data.csv personalRatings.txt > output.out
-
-
