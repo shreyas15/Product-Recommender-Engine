@@ -26,6 +26,11 @@ Alternating least squares method:
 
         spark-submit --driver-memory 2g recommenderEngine.py ratings2.csv 9994 0439893577 > test.out
 
+3. To run the cos_similarity.py
+
+        spark-submit --driver-memory 2g cos_similarity.py ratings.csv meta_data.csv 5594 > output.out 
+
+
 ### Alternating least square method: To execute recommenderEngine_ALS.py
 
 1. Place the input file in the hdfs
