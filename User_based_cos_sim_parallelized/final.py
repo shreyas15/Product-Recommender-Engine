@@ -120,7 +120,7 @@ if __name__ == "__main__":
     print ('Environment set and input file read.')
     # we make use of the spark broadcast feature and send the product purchase history
     # for each user across all nodes.
-    user_prod_purchases = lines.map(vectorizeUsers).groupByKey().collect()
+    user_prod_purchases = lines.map(vectorizeProducts).groupByKey().collect()
     # create a user-product dictionary to reference user vs products
     user_prod_dict = {}
     for (user,items) in user_prod_purchases:
@@ -154,11 +154,15 @@ if __name__ == "__main__":
     recom_found = True
     for x in recommendations:
         if (x[0] == str(query_user)):
-            for index, y in enumerate(x[1]):
-                print ("#%d ID: %s: %s" % (index, y, prod_dict[int(y[0])]))
+            # for index, y in enumerate(x[1]):
+            #     print ("#%d ID: %s: %s" % (index, y, prod_dict[int(y[0])]))
+            for i in xrange(len(x[1])):
+                print ("%2d: %s: %s" % (i + 1, x[1][i], prod_dict[int(x[1][i])])).encode('ascii', 'ignore')
             recom_found = False
+        else:
+            continue
     if recom_found:
-        print "No recommendations found"
+        print "Not enough data to make recommendations for the given user."
 
     # count = 100
     # for x in recommendations:
