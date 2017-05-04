@@ -1,0 +1,9 @@
+Environment set and input file read.
+Broadcast data to all nodes in the cluster - Complete.
+Finished finding user-rating pairs for each product.
+Finished finding user-user pairs.
+Making recommendations... please wait.
+#0 ID: 164668: Nursery Rhymes Felt Book
+#1 ID: 80586: Sanctuary: The Thieves' World Boardgame [BOX SET]
+#2 ID: 72440: Blues Clues On the Go with Blue Color &amp; Activity Book
+#3 ID: 15860: Nursery Rhymes Felt Book
